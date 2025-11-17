@@ -60,17 +60,35 @@ The game works offline, without ads or accounts.`,
                 style={styles.hellpathheadabouttext}
               >{`The game works offline, without ads or accounts.`}</Text>
 
-              <TouchableOpacity
-                activeOpacity={0.7}
-                onPress={() => Linking.openURL('')}
-              >
-                <ImageBackground
-                  source={require('../../assets/images/hellpathbtn.png')}
-                  style={styles.hellpathbutton}
+              {Platform.OS === 'ios' ? (
+                <TouchableOpacity
+                  activeOpacity={0.7}
+                  onPress={() =>
+                    Linking.openURL(
+                      'https://apps.apple.com/us/app/hell-path-to-hot-orchard/id6755380440',
+                    )
+                  }
                 >
-                  <Text style={styles.hellpathbuttontext}>SHARE APP</Text>
-                </ImageBackground>
-              </TouchableOpacity>
+                  <ImageBackground
+                    source={require('../../assets/images/hellpathbtn.png')}
+                    style={styles.hellpathbutton}
+                  >
+                    <Text style={styles.hellpathbuttontext}>SHARE APP</Text>
+                  </ImageBackground>
+                </TouchableOpacity>
+              ) : (
+                <TouchableOpacity
+                  activeOpacity={0.7}
+                  onPress={() => shareHellPathAbout()}
+                >
+                  <ImageBackground
+                    source={require('../../assets/images/hellpathbtn.png')}
+                    style={styles.hellpathbutton}
+                  >
+                    <Text style={styles.hellpathbuttontext}>SHARE</Text>
+                  </ImageBackground>
+                </TouchableOpacity>
+              )}
             </View>
             <Image
               source={require('../../assets/images/hellpathcode.png')}
@@ -108,7 +126,11 @@ The game works offline, without ads or accounts.`}</Text>
             {Platform.OS === 'ios' ? (
               <TouchableOpacity
                 activeOpacity={0.7}
-                onPress={() => Linking.openURL('')}
+                onPress={() =>
+                  Linking.openURL(
+                    'https://apps.apple.com/us/app/hell-path-to-hot-orchard/id6755380440',
+                  )
+                }
               >
                 <ImageBackground
                   source={require('../../assets/images/hellpathbtn.png')}
