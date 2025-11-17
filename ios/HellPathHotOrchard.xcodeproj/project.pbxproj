@@ -12,6 +12,11 @@
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		AC9F3307DD9588DBC5059EAE /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		C86C7084656B4AD7815C5FD6 /* LuckiestGuy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8872CBC96FF4DC5A46478B3 /* LuckiestGuy-Regular.ttf */; };
+		D1CC6E762EC65364006DA163 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1CC6E752EC65364006DA163 /* AVKit.framework */; };
+		D1CC6E782EC6536C006DA163 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1CC6E772EC6536C006DA163 /* AudioToolbox.framework */; };
+		D1CC6E7A2EC65373006DA163 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1CC6E792EC65373006DA163 /* AVFoundation.framework */; };
+		D1CC6E7C2EC73FDC006DA163 /* ringtone-13759.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D1CC6E7B2EC73FDC006DA163 /* ringtone-13759.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-HellPathHotOrchard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HellPathHotOrchard.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = HellPathHotOrchard/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = HellPathHotOrchard/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C8872CBC96FF4DC5A46478B3 /* LuckiestGuy-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "LuckiestGuy-Regular.ttf"; path = "../assets/fonts/LuckiestGuy-Regular.ttf"; sourceTree = "<group>"; };
+		D1CC6E752EC65364006DA163 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		D1CC6E772EC6536C006DA163 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D1CC6E792EC65373006DA163 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D1CC6E7B2EC73FDC006DA163 /* ringtone-13759.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ringtone-13759.mp3"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -32,6 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1CC6E7A2EC65373006DA163 /* AVFoundation.framework in Frameworks */,
+				D1CC6E782EC6536C006DA163 /* AudioToolbox.framework in Frameworks */,
+				D1CC6E762EC65364006DA163 /* AVKit.framework in Frameworks */,
 				0C80B921A6F3F58F76C31292 /* libPods-HellPathHotOrchard.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,6 +67,9 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D1CC6E792EC65373006DA163 /* AVFoundation.framework */,
+				D1CC6E772EC6536C006DA163 /* AudioToolbox.framework */,
+				D1CC6E752EC65364006DA163 /* AVKit.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				5DCACB8F33CDC322A6C60F78 /* libPods-HellPathHotOrchard.a */,
 			);
@@ -75,6 +91,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				CD40E3BDAEE04EA38DF54159 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -96,6 +113,15 @@
 				5709B34CF0A7D63546082F79 /* Pods-HellPathHotOrchard.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CD40E3BDAEE04EA38DF54159 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C8872CBC96FF4DC5A46478B3 /* LuckiestGuy-Regular.ttf */,
+				D1CC6E7B2EC73FDC006DA163 /* ringtone-13759.mp3 */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,9 +184,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1CC6E7C2EC73FDC006DA163 /* ringtone-13759.mp3 in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				AC9F3307DD9588DBC5059EAE /* PrivacyInfo.xcprivacy in Resources */,
+				C86C7084656B4AD7815C5FD6 /* LuckiestGuy-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,9 +219,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-HellPathHotOrchard/Pods-HellPathHotOrchard-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-HellPathHotOrchard/Pods-HellPathHotOrchard-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -230,9 +262,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-HellPathHotOrchard/Pods-HellPathHotOrchard-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-HellPathHotOrchard/Pods-HellPathHotOrchard-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -273,7 +309,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HellPathToHotOrchard;
 				PRODUCT_NAME = HellPathHotOrchard;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -300,7 +336,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HellPathToHotOrchard;
 				PRODUCT_NAME = HellPathHotOrchard;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -376,10 +412,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -448,10 +481,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
