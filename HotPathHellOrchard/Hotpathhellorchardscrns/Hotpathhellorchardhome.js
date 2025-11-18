@@ -7,16 +7,16 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import LayoutHotOrchard from '../ComponentsHotOrchard/LayoutHotOrchard';
 import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import { useCallback, useEffect, useState } from 'react';
-import { useStore } from '../StoreHotOrchard/contextHotOrchard';
+import { useStore } from '../Hotpathhellorchardstr/hotpathhellorchardcontext';
 import Sound from 'react-native-sound';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Hotpathhellorchardcontainer from '../Hotpathhellorchardcmpnnts/Hotpathhellorchardcontainer';
 
 const { height } = Dimensions.get('window');
 
-const HomeHotOrchard = () => {
+const Hotpathhellorchardhome = () => {
   const navigation = useNavigation();
   const [bgMusicTrackIndex, setBgMusicTrackIndex] = useState(0);
   useState(0);
@@ -111,17 +111,22 @@ const HomeHotOrchard = () => {
   };
 
   return (
-    <LayoutHotOrchard>
+    <Hotpathhellorchardcontainer>
       <View style={styles.hellpathcontainer}>
         <Image
           source={require('../../assets/images/hellpathlogo.png')}
-          style={{ marginBottom: 40 }}
+          style={{
+            marginBottom: 40,
+            width: 226,
+            height: 226,
+            borderRadius: 50,
+          }}
         />
 
         <View style={{ gap: 8 }}>
           <TouchableOpacity
             activeOpacity={0.7}
-            onPress={() => navigation.navigate('GameHotOrchard')}
+            onPress={() => navigation.navigate('Hotpathhellorchardongame')}
           >
             <ImageBackground
               source={require('../../assets/images/hellpathbtn.png')}
@@ -132,7 +137,7 @@ const HomeHotOrchard = () => {
           </TouchableOpacity>
           <TouchableOpacity
             activeOpacity={0.7}
-            onPress={() => navigation.navigate('PuzzleHotOrchard')}
+            onPress={() => navigation.navigate('Hotpathhellorchardonpuzzle')}
           >
             <ImageBackground
               source={require('../../assets/images/hellpathbtn.png')}
@@ -143,7 +148,7 @@ const HomeHotOrchard = () => {
           </TouchableOpacity>
           <TouchableOpacity
             activeOpacity={0.7}
-            onPress={() => navigation.navigate('SettingsHotOrchard')}
+            onPress={() => navigation.navigate('Hotpathhellorchardonsettings')}
           >
             <ImageBackground
               source={require('../../assets/images/hellpathbtn.png')}
@@ -154,7 +159,7 @@ const HomeHotOrchard = () => {
           </TouchableOpacity>
           <TouchableOpacity
             activeOpacity={0.7}
-            onPress={() => navigation.navigate('AboutHotOrchard')}
+            onPress={() => navigation.navigate('Hotpathhellorchardabout')}
           >
             <ImageBackground
               source={require('../../assets/images/hellpathbtn.png')}
@@ -165,7 +170,7 @@ const HomeHotOrchard = () => {
           </TouchableOpacity>
         </View>
       </View>
-    </LayoutHotOrchard>
+    </Hotpathhellorchardcontainer>
   );
 };
 
@@ -190,4 +195,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeHotOrchard;
+export default Hotpathhellorchardhome;

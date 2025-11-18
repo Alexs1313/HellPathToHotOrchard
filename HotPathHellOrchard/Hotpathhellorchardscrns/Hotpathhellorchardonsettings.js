@@ -1,7 +1,6 @@
-import LayoutHotOrchard from '../ComponentsHotOrchard/LayoutHotOrchard';
 import { useNavigation } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useStore } from '../StoreHotOrchard/contextHotOrchard';
+import { useStore } from '../Hotpathhellorchardstr/hotpathhellorchardcontext';
 import {
   Dimensions,
   Image,
@@ -12,10 +11,11 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import Hotpathhellorchardcontainer from '../Hotpathhellorchardcmpnnts/Hotpathhellorchardcontainer';
 
 const { height } = Dimensions.get('window');
 
-const SettingsHotOrchard = () => {
+const Hotpathhellorchardonsettings = () => {
   const navigation = useNavigation();
   const { isOnHellPathMusic, setIsOnHellPathMusic } = useStore();
 
@@ -38,7 +38,7 @@ const SettingsHotOrchard = () => {
   };
 
   return (
-    <LayoutHotOrchard>
+    <Hotpathhellorchardcontainer>
       <TouchableOpacity
         activeOpacity={0.7}
         style={styles.hellpathbackbutton}
@@ -91,7 +91,7 @@ const SettingsHotOrchard = () => {
           />
         </View>
       </View>
-    </LayoutHotOrchard>
+    </Hotpathhellorchardcontainer>
   );
 };
 
@@ -182,4 +182,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SettingsHotOrchard;
+export default Hotpathhellorchardonsettings;

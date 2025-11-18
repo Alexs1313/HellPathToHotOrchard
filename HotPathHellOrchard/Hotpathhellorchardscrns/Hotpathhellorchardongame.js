@@ -10,7 +10,6 @@ import {
   Platform,
   Modal,
 } from 'react-native';
-import LayoutHotOrchard from '../ComponentsHotOrchard/LayoutHotOrchard';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import { BlurView } from '@react-native-community/blur';
@@ -18,6 +17,7 @@ import { captureRef } from 'react-native-view-shot';
 import RNFS from 'react-native-fs';
 import Orientation from 'react-native-orientation-locker';
 import Share from 'react-native-share';
+import Hotpathhellorchardcontainer from '../Hotpathhellorchardcmpnnts/Hotpathhellorchardcontainer';
 
 const { height } = Dimensions.get('window');
 
@@ -38,7 +38,7 @@ const hellPathHotPuzzlePieces = [
   require('../../assets/images/hellpathpe5.png'),
 ];
 
-const GameHotOrchard = () => {
+const Hotpathhellorchardongame = () => {
   const navigation = useNavigation();
   const [hellPathHotScreen, setHellPathHotScreen] = useState('intro');
   const [hellPathHotLevel, setHellPathHotLevel] = useState(1);
@@ -170,7 +170,7 @@ const GameHotOrchard = () => {
 
   if (hellPathHotScreen === 'intro')
     return (
-      <LayoutHotOrchard>
+      <Hotpathhellorchardcontainer>
         <TouchableOpacity
           style={hellPathHotStyles.hellPathHotBackBtn}
           onPress={() => navigation.goBack()}
@@ -213,12 +213,12 @@ Find the code to unlock the wallpaper in the “About the app” section.`}
             </TouchableOpacity>
           </View>
         </View>
-      </LayoutHotOrchard>
+      </Hotpathhellorchardcontainer>
     );
 
   if (hellPathHotScreen === 'game')
     return (
-      <LayoutHotOrchard>
+      <Hotpathhellorchardcontainer>
         <View style={hellPathHotStyles.hellPathHotCenterWrap}>
           <Text style={hellPathHotStyles.hellPathHotTitle}>
             LEVEL {hellPathHotLevel} / 5
@@ -383,7 +383,7 @@ Find the code to unlock the wallpaper in the “About the app” section.`}
             </TouchableOpacity>
           </View>
         </Modal>
-      </LayoutHotOrchard>
+      </Hotpathhellorchardcontainer>
     );
 };
 
@@ -579,4 +579,4 @@ const hellPathHotStyles = StyleSheet.create({
   },
 });
 
-export default GameHotOrchard;
+export default Hotpathhellorchardongame;

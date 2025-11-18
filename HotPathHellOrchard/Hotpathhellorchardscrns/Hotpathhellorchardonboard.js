@@ -7,18 +7,18 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import LayoutHotOrchard from '../ComponentsHotOrchard/LayoutHotOrchard';
 import { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
+import Hotpathhellorchardcontainer from '../Hotpathhellorchardcmpnnts/Hotpathhellorchardcontainer';
 
 const { height } = Dimensions.get('window');
 
-const OnboardHotOrchard = () => {
+const Hotpathhellorchardonboard = () => {
   const [hellPathCurrentStep, setHellPathCurrentStep] = useState(0);
   const navigation = useNavigation();
 
   return (
-    <LayoutHotOrchard>
+    <Hotpathhellorchardcontainer>
       <View style={styles.hellpathcontainer}>
         <Text style={styles.hellpathtitle}>
           {hellPathCurrentStep === 0 && 'Find a pair of fruits'}
@@ -84,7 +84,7 @@ fragments`}
           style={{ marginTop: height * 0.07 }}
           onPress={() =>
             hellPathCurrentStep === 3
-              ? navigation.navigate('HomeHotOrchard')
+              ? navigation.navigate('Hotpathhellorchardhome')
               : setHellPathCurrentStep(hellPathCurrentStep + 1)
           }
         >
@@ -101,7 +101,7 @@ fragments`}
           </ImageBackground>
         </TouchableOpacity>
       </View>
-    </LayoutHotOrchard>
+    </Hotpathhellorchardcontainer>
   );
 };
 
@@ -143,4 +143,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default OnboardHotOrchard;
+export default Hotpathhellorchardonboard;

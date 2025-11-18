@@ -9,15 +9,15 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import LayoutHotOrchard from '../ComponentsHotOrchard/LayoutHotOrchard';
 import { useNavigation } from '@react-navigation/native';
 import { useState } from 'react';
 import Clipboard from '@react-native-clipboard/clipboard';
 import Share from 'react-native-share';
+import Hotpathhellorchardcontainer from '../Hotpathhellorchardcmpnnts/Hotpathhellorchardcontainer';
 
 const { height } = Dimensions.get('window');
 
-const AboutHotOrchard = () => {
+const Hotpathhellorchardabout = () => {
   const navigation = useNavigation();
   const [isVisibleHellPathCode, setIsVisibleHellPathCode] = useState(false);
 
@@ -38,7 +38,7 @@ The game works offline, without ads or accounts.`,
   };
 
   return (
-    <LayoutHotOrchard>
+    <Hotpathhellorchardcontainer>
       <TouchableOpacity
         activeOpacity={0.7}
         style={styles.hellpathbackbutton}
@@ -65,7 +65,7 @@ The game works offline, without ads or accounts.`,
                   activeOpacity={0.7}
                   onPress={() =>
                     Linking.openURL(
-                      'https://apps.apple.com/us/app/hell-path-to-hot-orchard/id6755380440',
+                      'https://apps.apple.com/us/app/hot-path-to-hell-orchard/id6755433775',
                     )
                   }
                 >
@@ -112,12 +112,17 @@ The game works offline, without ads or accounts.`,
           >
             <Image
               source={require('../../assets/images/hellpathlogo.png')}
-              style={{ marginBottom: 40, width: 175, height: 175 }}
+              style={{
+                marginBottom: 40,
+                width: 175,
+                height: 175,
+                borderRadius: 50,
+              }}
             />
 
             <Text
               style={styles.hellpathheadabouttext}
-            >{`Hell Path to Hot Orchard is a fire-themed puzzle game where you match fruit to reveal the pieces of the “Hot Orchard” painting.
+            >{`Hot Path to Hell Orchard is a fire-themed puzzle game where you match fruit to reveal the pieces of the “Hot Orchard” painting.
 
 Collect all 5 pieces to create your own fire garden and download it as your wallpaper.
 
@@ -128,7 +133,7 @@ The game works offline, without ads or accounts.`}</Text>
                 activeOpacity={0.7}
                 onPress={() =>
                   Linking.openURL(
-                    'https://apps.apple.com/us/app/hell-path-to-hot-orchard/id6755380440',
+                    'https://apps.apple.com/us/app/hot-path-to-hell-orchard/id6755433775',
                   )
                 }
               >
@@ -155,7 +160,7 @@ The game works offline, without ads or accounts.`}</Text>
           </TouchableOpacity>
         )}
       </View>
-    </LayoutHotOrchard>
+    </Hotpathhellorchardcontainer>
   );
 };
 
@@ -244,4 +249,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AboutHotOrchard;
+export default Hotpathhellorchardabout;

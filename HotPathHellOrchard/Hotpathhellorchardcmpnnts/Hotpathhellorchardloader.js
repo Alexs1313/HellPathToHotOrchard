@@ -1,10 +1,10 @@
 import React from 'react';
 import { WebView } from 'react-native-webview';
-import { View, StyleSheet } from 'react-native';
-import LayoutHotOrchard from './LayoutHotOrchard';
+import { View, Image, StyleSheet } from 'react-native';
+import LayoutHotOrchard from './Hotpathhellorchardcontainer';
 
-const LoaderHotOrchard = () => {
-  const hotOrchadLoaderHtml = `
+const Hotpathhellorchardloader = () => {
+  const hellPathHtmlLoader = `
 <!DOCTYPE html>
 <html>
   <head>
@@ -77,11 +77,18 @@ const LoaderHotOrchard = () => {
 
   return (
     <LayoutHotOrchard>
-      <View style={styles.loadercontainer}>
+      <View style={styles.loadercnt}>
+        <Image
+          source={require('../../assets/images/hellpathlogo.png')}
+          style={{ bottom: 50, width: 250, height: 250, borderRadius: 50 }}
+        />
+      </View>
+
+      <View style={styles.loaderwrap}>
         <WebView
           originWhitelist={['*']}
-          source={{ html: hotOrchadLoaderHtml }}
-          style={{ width: 220, height: 100, backgroundColor: 'transparent' }}
+          source={{ html: hellPathHtmlLoader }}
+          style={{ width: 220, height: 200, backgroundColor: 'transparent' }}
           scrollEnabled={false}
         />
       </View>
@@ -90,11 +97,19 @@ const LoaderHotOrchard = () => {
 };
 
 const styles = StyleSheet.create({
-  loadercontainer: {
+  loadercnt: {
     flex: 1,
     justifyContent: 'center',
+    alignItems: 'center',
+    height: 570,
+  },
+  loaderwrap: {
+    position: 'absolute',
+    bottom: 30,
+    left: 0,
+    right: 0,
     alignItems: 'center',
   },
 });
 
-export default LoaderHotOrchard;
+export default Hotpathhellorchardloader;

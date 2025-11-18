@@ -1,6 +1,6 @@
 import { ImageBackground, ScrollView } from 'react-native';
 
-const LayoutHotOrchard = ({ children }) => {
+const Hotpathhellorchardcontainer = ({ children }) => {
   return (
     <ImageBackground
       source={require('../../assets/images/hellpathbg.png')}
@@ -16,4 +16,4 @@ const LayoutHotOrchard = ({ children }) => {
   );
 };
 
-export default LayoutHotOrchard;
+export default Hotpathhellorchardcontainer;

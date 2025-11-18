@@ -11,7 +11,6 @@ import {
   Platform,
   Modal,
 } from 'react-native';
-import LayoutHotOrchard from '../ComponentsHotOrchard/LayoutHotOrchard';
 import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { BlurView } from '@react-native-community/blur';
@@ -19,11 +18,12 @@ import { captureRef } from 'react-native-view-shot';
 import Share from 'react-native-share';
 import RNFS from 'react-native-fs';
 import Orientation from 'react-native-orientation-locker';
+import Hotpathhellorchardcontainer from '../Hotpathhellorchardcmpnnts/Hotpathhellorchardcontainer';
 
 const { height } = Dimensions.get('window');
 const hellPathHotFinalPuzzle = require('../../assets/images/hellpathfull.png');
 
-const PuzzleHotOrchard = () => {
+const Hotpathhellorchardonpuzzle = () => {
   const navigation = useNavigation();
   const [hellPathHotOpenedList, hellPathHotSetOpenedList] = useState([]);
   const [hellPathHotShowCodeModal, hellPathHotSetShowCodeModal] =
@@ -112,7 +112,7 @@ const PuzzleHotOrchard = () => {
 
   if (hellPathHotCorrectCode)
     return (
-      <LayoutHotOrchard>
+      <Hotpathhellorchardcontainer>
         <TouchableOpacity
           activeOpacity={0.7}
           style={styles.hellPathHotBackBtn}
@@ -164,13 +164,13 @@ const PuzzleHotOrchard = () => {
             </TouchableOpacity>
           </View>
         </View>
-      </LayoutHotOrchard>
+      </Hotpathhellorchardcontainer>
     );
 
   const hellPathHotOpenedPercent = hellPathHotOpenedList.length * 20;
 
   return (
-    <LayoutHotOrchard>
+    <Hotpathhellorchardcontainer>
       <TouchableOpacity
         style={styles.hellPathHotBackBtn}
         activeOpacity={0.7}
@@ -316,7 +316,7 @@ const PuzzleHotOrchard = () => {
           </TouchableOpacity>
         </View>
       </Modal>
-    </LayoutHotOrchard>
+    </Hotpathhellorchardcontainer>
   );
 };
 
@@ -498,4 +498,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default PuzzleHotOrchard;
+export default Hotpathhellorchardonpuzzle;

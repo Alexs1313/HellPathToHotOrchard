@@ -1,19 +1,19 @@
 workflows:
   ios-workflow:
-    name: Hell Path to Hot Orchard
+    name: Hot Path to Hell Orchard
     max_build_duration: 120
     instance_type: mac_mini_m2
     integrations:
-      app_store_connect: HellPathToHotOrchardAPIKey
+      app_store_connect: HotPathToHellOrchardNewAPIKey
     environment:
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.HellPathToHotOrchard
+        bundle_identifier: com.HotPathToHellOrchard
       vars:
-        BUNDLE_ID: com.HellPathToHotOrchard
+        BUNDLE_ID: com.HotPathToHellOrchard
         XCODE_WORKSPACE: HellPathHotOrchard.xcworkspace
         XCODE_SCHEME: HellPathHotOrchard
-        APP_STORE_APPLE_ID: 6755380440
+        APP_STORE_APPLE_ID: 6755433775
     scripts:
       - name: Install npm dependencies
         script: |
@@ -44,4 +44,4 @@ workflows:
       app_store_connect:
         auth: integration
         submit_to_app_store: true
-        copyright: Hell Path to Hot Orchard 2025
+        copyright: Hot Path to Hell Orchard 2025
