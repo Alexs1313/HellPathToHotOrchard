@@ -1,22 +1,22 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { useEffect, useState } from 'react';
-import { MusicProvider } from './HotPathHellOrchard/Hotpathhellorchardstr/hotpathhellorchardcontext';
-import Hotpathhellorchardstack from './HotPathHellOrchard/Hotpathhellorchardnvgt/Hotpathhellorchardstack';
-import Hotpathhellorchardloader from './HotPathHellOrchard/Hotpathhellorchardcmpnnts/Hotpathhellorchardloader';
+import { MusicProvider } from './HellMemoryOfHotGrove/HellMemoryOfHotGroveStore/hotpathhellorchardcontext';
+import Hotpathhellorchardstack from './HellMemoryOfHotGrove/HellMemoryOfHotGroveNavigation/Hotpathhellorchardstack';
+import Hotpathhellorchardloader from './HellMemoryOfHotGrove/HellMemoryOfHotGroveComponents/Hotpathhellorchardloader';
 
 const App = () => {
-  const [isVisibleOrchardStack, setIsVisibleOrchardStack] = useState(true);
+  const [isVisibleStack, setIsVisibleStack] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
-      setIsVisibleOrchardStack(false);
+      setIsVisibleStack(false);
     }, 6000);
   }, []);
 
   return (
     <NavigationContainer>
       <MusicProvider>
-        {isVisibleOrchardStack ? (
+        {isVisibleStack ? (
           <Hotpathhellorchardloader />
         ) : (
           <Hotpathhellorchardstack />

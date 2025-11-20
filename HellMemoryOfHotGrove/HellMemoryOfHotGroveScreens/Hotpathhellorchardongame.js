@@ -17,7 +17,8 @@ import { captureRef } from 'react-native-view-shot';
 import RNFS from 'react-native-fs';
 import Orientation from 'react-native-orientation-locker';
 import Share from 'react-native-share';
-import Hotpathhellorchardcontainer from '../Hotpathhellorchardcmpnnts/Hotpathhellorchardcontainer';
+import Hotpathhellorchardcontainer from '../HellMemoryOfHotGroveComponents/Hotpathhellorchardcontainer';
+import LinearGradient from 'react-native-linear-gradient';
 
 const { height } = Dimensions.get('window');
 
@@ -236,32 +237,46 @@ Find the code to unlock the wallpaper in the “About the app” section.`}
               const done = hellPathHotMatched.includes(idx);
 
               return (
-                <TouchableOpacity
-                  key={idx}
-                  activeOpacity={0.7}
-                  onPress={() => hellPathHotPressTile(idx)}
-                  style={hellPathHotStyles.hellPathHotTile}
+                <LinearGradient
+                  colors={
+                    open || done
+                      ? ['transparent', 'transparent']
+                      : ['#730C01', '#E2970C']
+                  }
+                  style={{
+                    borderRadius: 22,
+                    width: 110,
+                    height: 110,
+                    marginBottom: 30,
+                  }}
                 >
-                  {done ? (
-                    <View style={hellPathHotStyles.hellPathHotDoneWrap}>
-                      <Image
-                        source={hellPathHotFireCircle}
-                        style={hellPathHotStyles.hellPathHotFireCircle}
-                      />
+                  <TouchableOpacity
+                    key={idx}
+                    activeOpacity={0.7}
+                    onPress={() => hellPathHotPressTile(idx)}
+                    style={hellPathHotStyles.hellPathHotTile}
+                  >
+                    {done ? (
+                      <View style={hellPathHotStyles.hellPathHotDoneWrap}>
+                        <Image
+                          source={hellPathHotFireCircle}
+                          style={hellPathHotStyles.hellPathHotFireCircle}
+                        />
+                        <Image
+                          source={t.img}
+                          style={hellPathHotStyles.hellPathHotFruitOnFire}
+                        />
+                      </View>
+                    ) : open ? (
                       <Image
                         source={t.img}
-                        style={hellPathHotStyles.hellPathHotFruitOnFire}
+                        style={hellPathHotStyles.hellPathHotFruit}
                       />
-                    </View>
-                  ) : open ? (
-                    <Image
-                      source={t.img}
-                      style={hellPathHotStyles.hellPathHotFruit}
-                    />
-                  ) : (
-                    <View style={hellPathHotStyles.hellPathHotCover} />
-                  )}
-                </TouchableOpacity>
+                    ) : (
+                      <View style={hellPathHotStyles.hellPathHotCover} />
+                    )}
+                  </TouchableOpacity>
+                </LinearGradient>
               );
             })}
           </View>
@@ -312,47 +327,58 @@ Find the code to unlock the wallpaper in the “About the app” section.`}
               />
             )}
 
-            <View style={hellPathHotStyles.hellPathHotModalBox}>
-              <Text style={hellPathHotStyles.hellPathHotBig}>GREAT!</Text>
-              <Text style={hellPathHotStyles.hellPathHotBigSub}>
-                LEVEL COMPLETED
-              </Text>
+            <LinearGradient
+              colors={['#730C01', '#E2970C']}
+              style={{
+                borderRadius: 22,
+                width: '87%',
+              }}
+            >
+              <View style={hellPathHotStyles.hellPathHotModalBox}>
+                <Text style={hellPathHotStyles.hellPathHotBig}>GREAT!</Text>
+                <Text style={hellPathHotStyles.hellPathHotBigSub}>
+                  LEVEL COMPLETED
+                </Text>
 
-              <Text style={hellPathHotStyles.hellPathHotModalSub}>
-                All pairs found! You have received a puzzle piece!
-              </Text>
+                <Text style={hellPathHotStyles.hellPathHotModalSub}>
+                  All pairs found! You have received a puzzle piece!
+                </Text>
 
-              <View
-                ref={shareRef}
-                collapsable={false}
-                style={{
-                  width: '85%',
-                  height: 115,
-                  borderRadius: 22,
-                  overflow: 'hidden',
-                  marginBottom: 60,
-                  borderWidth: 1,
-                  borderColor: '#F99B00',
-                }}
-              >
-                <Image
-                  source={hellPathHotPuzzlePieces[hellPathHotLevel - 1]}
-                  style={{ width: '100%', height: '100%', resizeMode: 'cover' }}
-                />
-              </View>
-
-              <TouchableOpacity onPress={hellPathHotShare}>
-                <ImageBackground
-                  source={require('../../assets/images/hellpathbtn.png')}
-                  style={hellPathHotStyles.hellPathHotShareBtn}
+                <View
+                  ref={shareRef}
+                  collapsable={false}
+                  style={{
+                    width: '85%',
+                    height: 115,
+                    borderRadius: 22,
+                    overflow: 'hidden',
+                    marginBottom: 60,
+                    borderWidth: 1,
+                    borderColor: '#F99B00',
+                  }}
                 >
-                  <Text style={hellPathHotStyles.hellPathHotModalText}>
-                    SHARE
-                  </Text>
-                </ImageBackground>
-              </TouchableOpacity>
-            </View>
+                  <Image
+                    source={hellPathHotPuzzlePieces[hellPathHotLevel - 1]}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      resizeMode: 'cover',
+                    }}
+                  />
+                </View>
 
+                <TouchableOpacity onPress={hellPathHotShare}>
+                  <ImageBackground
+                    source={require('../../assets/images/hellpathbtn.png')}
+                    style={hellPathHotStyles.hellPathHotShareBtn}
+                  >
+                    <Text style={hellPathHotStyles.hellPathHotModalText}>
+                      SHARE
+                    </Text>
+                  </ImageBackground>
+                </TouchableOpacity>
+              </View>
+            </LinearGradient>
             <TouchableOpacity
               style={hellPathHotStyles.hellPathHotNextWrap}
               onPress={() => {
@@ -461,22 +487,21 @@ const hellPathHotStyles = StyleSheet.create({
     width: hellPathHotTileSize,
     height: hellPathHotTileSize,
     borderRadius: 22,
-    backgroundColor: '#3F0000',
     borderWidth: 4,
     borderColor: '#F99B00',
   },
   hellPathHotFruit: {
     width: 50,
-    height: 50,
+    height: 70,
     resizeMode: 'contain',
   },
   hellPathHotDoneWrap: { alignItems: 'center' },
   hellPathHotFireCircle: {
-    width: 111,
-    height: 125,
+    width: 110,
+    height: 105,
     resizeMode: 'contain',
     position: 'absolute',
-    top: -20,
+    top: -10,
   },
   hellPathHotFruitOnFire: {
     width: 50,
@@ -525,8 +550,7 @@ const hellPathHotStyles = StyleSheet.create({
     zIndex: 999,
   },
   hellPathHotModalBox: {
-    width: '87%',
-    backgroundColor: '#3F0000',
+    width: '100%',
     borderWidth: 4,
     borderColor: '#F99B00',
     padding: 25,

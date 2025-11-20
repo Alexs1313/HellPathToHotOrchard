@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useStore } from '../Hotpathhellorchardstr/hotpathhellorchardcontext';
+import { useStore } from '../HellMemoryOfHotGroveStore/hotpathhellorchardcontext';
 import {
   Dimensions,
   Image,
@@ -11,7 +11,8 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import Hotpathhellorchardcontainer from '../Hotpathhellorchardcmpnnts/Hotpathhellorchardcontainer';
+import Hotpathhellorchardcontainer from '../HellMemoryOfHotGroveComponents/Hotpathhellorchardcontainer';
+import LinearGradient from 'react-native-linear-gradient';
 
 const { height } = Dimensions.get('window');
 
@@ -68,23 +69,35 @@ const Hotpathhellorchardonsettings = () => {
               </TouchableOpacity>
             </View>
           )}
-          <View style={styles.hellpathcodecontainer}>
-            <Text
-              style={styles.hellpathheadabouttext}
-            >{`Clear progress:`}</Text>
 
-            <TouchableOpacity
-              activeOpacity={0.7}
-              onPress={clearHellPathProgress}
-            >
-              <ImageBackground
-                source={require('../../assets/images/hellpathbtn.png')}
-                style={styles.hellpathbutton}
+          <LinearGradient
+            colors={['#730C01', '#E2970C']}
+            style={{
+              borderRadius: 22,
+              width: '73%',
+              alignSelf: 'center',
+              marginTop: 16,
+            }}
+          >
+            <View style={styles.hellpathcodecontainer}>
+              <Text
+                style={styles.hellpathheadabouttext}
+              >{`Clear progress:`}</Text>
+
+              <TouchableOpacity
+                activeOpacity={0.7}
+                onPress={clearHellPathProgress}
               >
-                <Text style={styles.hellpathbuttontext}>Clear</Text>
-              </ImageBackground>
-            </TouchableOpacity>
-          </View>
+                <ImageBackground
+                  source={require('../../assets/images/hellpathbtn.png')}
+                  style={styles.hellpathbutton}
+                >
+                  <Text style={styles.hellpathbuttontext}>Clear</Text>
+                </ImageBackground>
+              </TouchableOpacity>
+            </View>
+          </LinearGradient>
+
           <Image
             source={require('../../assets/images/hellpathcherry.png')}
             style={styles.hellpathcodeimage}
@@ -142,16 +155,14 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
   hellpathcodecontainer: {
-    width: '73%',
+    width: '100%',
     alignItems: 'center',
     padding: 25,
     paddingHorizontal: 23,
-    backgroundColor: '#3F0000',
     borderRadius: 22,
     borderWidth: 4,
     borderColor: '#F99B00',
     paddingTop: 40,
-    marginTop: 16,
     alignSelf: 'center',
   },
   hellpathnumcontainer: {

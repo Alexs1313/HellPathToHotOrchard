@@ -18,7 +18,8 @@ import { captureRef } from 'react-native-view-shot';
 import Share from 'react-native-share';
 import RNFS from 'react-native-fs';
 import Orientation from 'react-native-orientation-locker';
-import Hotpathhellorchardcontainer from '../Hotpathhellorchardcmpnnts/Hotpathhellorchardcontainer';
+import Hotpathhellorchardcontainer from '../HellMemoryOfHotGroveComponents/Hotpathhellorchardcontainer';
+import LinearGradient from 'react-native-linear-gradient';
 
 const { height } = Dimensions.get('window');
 const hellPathHotFinalPuzzle = require('../../assets/images/hellpathfull.png');
@@ -197,42 +198,58 @@ const Hotpathhellorchardonpuzzle = () => {
           </Text>
         </Text>
 
-        <View style={styles.hellPathHotPuzzleBox}>
-          <View style={styles.hellPathHotProgressContainer}>
-            <Image
-              source={hellPathHotFinalPuzzle}
-              style={styles.hellPathHotFullInside}
-            />
+        <LinearGradient
+          colors={['#730C01', '#E2970C']}
+          style={{
+            borderRadius: 22,
+            width: '85%',
+            height: '65%',
+            alignSelf: 'center',
+            marginTop: 16,
+          }}
+        >
+          <View style={styles.hellPathHotPuzzleBox}>
+            <View style={styles.hellPathHotProgressContainer}>
+              <Image
+                source={hellPathHotFinalPuzzle}
+                style={styles.hellPathHotFullInside}
+              />
 
-            <View
-              style={[
-                styles.hellPathHotCoverMask,
-                { height: `${100 - hellPathHotOpenedPercent}%` },
-              ]}
-            />
-          </View>
+              <LinearGradient
+                colors={['#730C01', '#E2970C']}
+                style={[
+                  styles.hellPathHotCoverMask,
+                  { height: `${100 - hellPathHotOpenedPercent}%` },
+                ]}
+              />
+            </View>
 
-          {hellPathHotOpenedList.length === 5 && (
-            <TouchableOpacity
-              style={{ position: 'absolute', bottom: 30, alignSelf: 'center' }}
-              activeOpacity={0.7}
-              onPress={() => {
-                hellPathHotSetShowCodeModal(true);
-                hellPathHotSetError(false);
-                hellPathHotSetCode('');
-              }}
-            >
-              <ImageBackground
-                source={require('../../assets/images/hellpathbtn.png')}
-                style={styles.hellPathHotOpenWallpaperBtn}
+            {hellPathHotOpenedList.length === 5 && (
+              <TouchableOpacity
+                style={{
+                  position: 'absolute',
+                  bottom: 30,
+                  alignSelf: 'center',
+                }}
+                activeOpacity={0.7}
+                onPress={() => {
+                  hellPathHotSetShowCodeModal(true);
+                  hellPathHotSetError(false);
+                  hellPathHotSetCode('');
+                }}
               >
-                <Text style={styles.hellPathHotBigBtnOpenText}>
-                  OPEN WALLPAPER
-                </Text>
-              </ImageBackground>
-            </TouchableOpacity>
-          )}
-        </View>
+                <ImageBackground
+                  source={require('../../assets/images/hellpathbtn.png')}
+                  style={styles.hellPathHotOpenWallpaperBtn}
+                >
+                  <Text style={styles.hellPathHotBigBtnOpenText}>
+                    OPEN WALLPAPER
+                  </Text>
+                </ImageBackground>
+              </TouchableOpacity>
+            )}
+          </View>
+        </LinearGradient>
       </View>
 
       <Modal
@@ -249,17 +266,26 @@ const Hotpathhellorchardonpuzzle = () => {
               blurAmount={2}
             />
           )}
-          <View style={styles.hellPathHotModalBox}>
-            <Text style={styles.hellPathHotModalTitle}>NOT SO FAST!</Text>
-            <Text style={styles.hellPathHotModalSubtitle}>
-              YOU NEED A PASSWORD TO ACCESS{'\n'}THE WALLPAPER!
-            </Text>
 
-            <Image
-              source={require('../../assets/images/hellpathlock.png')}
-              style={{ width: 90, height: 110, marginBottom: 15 }}
-            />
-          </View>
+          <LinearGradient
+            colors={['#730C01', '#E2970C']}
+            style={{
+              borderRadius: 22,
+              width: '87%',
+            }}
+          >
+            <View style={styles.hellPathHotModalBox}>
+              <Text style={styles.hellPathHotModalTitle}>NOT SO FAST!</Text>
+              <Text style={styles.hellPathHotModalSubtitle}>
+                YOU NEED A PASSWORD TO ACCESS{'\n'}THE WALLPAPER!
+              </Text>
+
+              <Image
+                source={require('../../assets/images/hellpathlock.png')}
+                style={{ width: 90, height: 110, marginBottom: 15 }}
+              />
+            </View>
+          </LinearGradient>
 
           <View
             style={[
@@ -353,9 +379,8 @@ const styles = StyleSheet.create({
     marginBottom: 35,
   },
   hellPathHotPuzzleBox: {
-    width: '85%',
-    height: '65%',
-    backgroundColor: '#3F0000',
+    width: '100%',
+    height: '100%',
     borderRadius: 12,
     overflow: 'hidden',
     position: 'relative',
@@ -424,8 +449,7 @@ const styles = StyleSheet.create({
     zIndex: 999,
   },
   hellPathHotModalBox: {
-    width: '85%',
-    backgroundColor: '#3F0000',
+    width: '100%',
     borderWidth: 4,
     borderColor: '#F99B00',
     padding: 25,

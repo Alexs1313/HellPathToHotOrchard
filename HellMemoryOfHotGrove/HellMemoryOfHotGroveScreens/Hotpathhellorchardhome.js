@@ -9,10 +9,10 @@ import {
 } from 'react-native';
 import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import { useCallback, useEffect, useState } from 'react';
-import { useStore } from '../Hotpathhellorchardstr/hotpathhellorchardcontext';
+import { useStore } from '../HellMemoryOfHotGroveStore/hotpathhellorchardcontext';
 import Sound from 'react-native-sound';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import Hotpathhellorchardcontainer from '../Hotpathhellorchardcmpnnts/Hotpathhellorchardcontainer';
+import Hotpathhellorchardcontainer from '../HellMemoryOfHotGroveComponents/Hotpathhellorchardcontainer';
 
 const { height } = Dimensions.get('window');
 

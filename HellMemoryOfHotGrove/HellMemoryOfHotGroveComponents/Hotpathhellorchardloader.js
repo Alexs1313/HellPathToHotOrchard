@@ -77,13 +77,6 @@ const Hotpathhellorchardloader = () => {
 
   return (
     <LayoutHotOrchard>
-      <View style={styles.loadercnt}>
-        <Image
-          source={require('../../assets/images/hellpathlogo.png')}
-          style={{ bottom: 50, width: 250, height: 250, borderRadius: 50 }}
-        />
-      </View>
-
       <View style={styles.loaderwrap}>
         <WebView
           originWhitelist={['*']}
@@ -97,17 +90,9 @@ const Hotpathhellorchardloader = () => {
 };
 
 const styles = StyleSheet.create({
-  loadercnt: {
+  loaderwrap: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
-    height: 570,
-  },
-  loaderwrap: {
-    position: 'absolute',
-    bottom: 30,
-    left: 0,
-    right: 0,
     alignItems: 'center',
   },
 });
