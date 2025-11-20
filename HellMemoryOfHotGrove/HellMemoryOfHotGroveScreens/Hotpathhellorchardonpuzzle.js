@@ -332,14 +332,31 @@ const Hotpathhellorchardonpuzzle = () => {
             )}
           </View>
 
-          <TouchableOpacity onPress={hellPathHotCheckCode} activeOpacity={0.7}>
-            <ImageBackground
-              source={require('../../assets/images/hellpathbtn.png')}
-              style={styles.hellPathHotOpenBtn}
+          <View style={{ flexDirection: 'row', gap: 20 }}>
+            <TouchableOpacity
+              onPress={hellPathHotCheckCode}
+              activeOpacity={0.7}
             >
-              <Text style={styles.hellPathHotBigBtnText}>OPEN</Text>
-            </ImageBackground>
-          </TouchableOpacity>
+              <ImageBackground
+                source={require('../../assets/images/hellpathbtn.png')}
+                style={styles.hellPathHotOpenBtn}
+              >
+                <Text style={styles.hellPathHotBigBtnText}>OPEN</Text>
+              </ImageBackground>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={hellPathHotCheckCode}
+              activeOpacity={0.7}
+            >
+              <ImageBackground
+                source={require('../../assets/images/hellpathbtn.png')}
+                style={styles.hellPathHotOpenBtn}
+                onPress={() => hellPathHotSetShowCodeModal(false)}
+              >
+                <Text style={styles.hellPathHotBigBtnText}>CLOSE</Text>
+              </ImageBackground>
+            </TouchableOpacity>
+          </View>
         </View>
       </Modal>
     </Hotpathhellorchardcontainer>
