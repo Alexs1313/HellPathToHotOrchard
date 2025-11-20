@@ -238,6 +238,7 @@ Find the code to unlock the wallpaper in the “About the app” section.`}
 
               return (
                 <LinearGradient
+                  key={idx}
                   colors={
                     open || done
                       ? ['transparent', 'transparent']
@@ -251,7 +252,6 @@ Find the code to unlock the wallpaper in the “About the app” section.`}
                   }}
                 >
                   <TouchableOpacity
-                    key={idx}
                     activeOpacity={0.7}
                     onPress={() => hellPathHotPressTile(idx)}
                     style={hellPathHotStyles.hellPathHotTile}

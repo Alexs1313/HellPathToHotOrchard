@@ -345,13 +345,12 @@ const Hotpathhellorchardonpuzzle = () => {
               </ImageBackground>
             </TouchableOpacity>
             <TouchableOpacity
-              onPress={hellPathHotCheckCode}
               activeOpacity={0.7}
+              onPress={() => hellPathHotSetShowCodeModal(false)}
             >
               <ImageBackground
                 source={require('../../assets/images/hellpathbtn.png')}
                 style={styles.hellPathHotOpenBtn}
-                onPress={() => hellPathHotSetShowCodeModal(false)}
               >
                 <Text style={styles.hellPathHotBigBtnText}>CLOSE</Text>
               </ImageBackground>
