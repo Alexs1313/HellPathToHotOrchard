@@ -70,7 +70,7 @@ The game works offline, without ads or accounts.`,
                     activeOpacity={0.7}
                     onPress={() =>
                       Linking.openURL(
-                        'https://apps.apple.com/us/app/hot-path-to-hell-orchard/id6755433775',
+                        'https://apps.apple.com/us/app/hell-memory-of-hot-grove/id6755543311',
                       )
                     }
                   >
@@ -143,7 +143,7 @@ The game works offline, without ads or accounts.`}</Text>
                   activeOpacity={0.7}
                   onPress={() =>
                     Linking.openURL(
-                      'https://apps.apple.com/us/app/hot-path-to-hell-orchard/id6755433775',
+                      'https://apps.apple.com/us/app/hell-memory-of-hot-grove/id6755543311',
                     )
                   }
                 >
