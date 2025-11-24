@@ -4,16 +4,16 @@ workflows:
     max_build_duration: 120
     instance_type: mac_mini_m2
     integrations:
-      app_store_connect: HellMemoryOfHotGroveApiKey
+      app_store_connect: HellMemoryOfHotGroveNewAPIKey
     environment:
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.HellMemoryOfHotGrove
+        bundle_identifier: com.HellMemoryOfHotGroveNew
       vars:
-        BUNDLE_ID: com.HellMemoryOfHotGrove
+        BUNDLE_ID: com.HellMemoryOfHotGroveNew
         XCODE_WORKSPACE: HellPathHotOrchard.xcworkspace
         XCODE_SCHEME: HellPathHotOrchard
-        APP_STORE_APPLE_ID: 6755543311
+        APP_STORE_APPLE_ID: 6755678877
     scripts:
       - name: Install npm dependencies
         script: |
