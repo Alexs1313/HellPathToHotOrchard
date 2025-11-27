@@ -1,10 +1,10 @@
 import { createStackNavigator } from '@react-navigation/stack';
-import Hotpathhellorchardabout from '../HellMemoryOfHotGroveScreens/Hotpathhellorchardabout';
-import Hotpathhellorchardhome from '../HellMemoryOfHotGroveScreens/Hotpathhellorchardhome';
-import Hotpathhellorchardonboard from '../HellMemoryOfHotGroveScreens/Hotpathhellorchardonboard';
-import Hotpathhellorchardongame from '../HellMemoryOfHotGroveScreens/Hotpathhellorchardongame';
-import Hotpathhellorchardonpuzzle from '../HellMemoryOfHotGroveScreens/Hotpathhellorchardonpuzzle';
-import Hotpathhellorchardonsettings from '../HellMemoryOfHotGroveScreens/Hotpathhellorchardonsettings';
+import Hotpathhellorchardabout from '../HotGroveScreens/Hotpathhellorchardabout';
+import Hotpathhellorchardhome from '../HotGroveScreens/Hotpathhellorchardhome';
+import Hotpathhellorchardonboard from '../HotGroveScreens/Hotpathhellorchardonboard';
+import Hotpathhellorchardongame from '../HotGroveScreens/Hotpathhellorchardongame';
+import Hotpathhellorchardonpuzzle from '../HotGroveScreens/Hotpathhellorchardonpuzzle';
+import Hotpathhellorchardonsettings from '../HotGroveScreens/Hotpathhellorchardonsettings';
 
 const Stack = createStackNavigator();
 
@@ -12,8 +12,8 @@ const Hotpathhellorchardstack = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen
-        name="Hotpathhellorchardonboard"
-        component={Hotpathhellorchardonboard}
+        name="Hotpathhellorchardonboar"
+        component={Hotpathhellorchardonboar}
       />
       <Stack.Screen
         name="Hotpathhellorchardhome"

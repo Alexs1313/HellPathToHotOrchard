@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useStore } from '../HellMemoryOfHotGroveStore/hotpathhellorchardcontext';
+import { useStore } from '../HotGroveStore/hotpathhellorchardcontext';
 import {
   Dimensions,
   Image,
@@ -11,7 +11,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import Hotpathhellorchardcontainer from '../HellMemoryOfHotGroveComponents/Hotpathhellorchardcontainer';
+import Hotpathhellorchardcontainer from '../HotGroveComponents/Hotpathhellorchardcontainer';
 import LinearGradient from 'react-native-linear-gradient';
 
 const { height } = Dimensions.get('window');

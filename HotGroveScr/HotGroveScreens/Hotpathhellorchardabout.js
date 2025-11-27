@@ -13,7 +13,7 @@ import { useNavigation } from '@react-navigation/native';
 import { useState } from 'react';
 import Clipboard from '@react-native-clipboard/clipboard';
 import Share from 'react-native-share';
-import Hotpathhellorchardcontainer from '../HellMemoryOfHotGroveComponents/Hotpathhellorchardcontainer';
+import Hotpathhellorchardcontainer from '../HotGroveComponents/Hotpathhellorchardcontainer';
 import LinearGradient from 'react-native-linear-gradient';
 
 const { height } = Dimensions.get('window');

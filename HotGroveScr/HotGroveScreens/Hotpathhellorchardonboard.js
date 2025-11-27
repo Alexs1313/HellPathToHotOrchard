@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
-import Hotpathhellorchardcontainer from '../HellMemoryOfHotGroveComponents/Hotpathhellorchardcontainer';
+import Hotpathhellorchardcontainer from '../HotGroveComponents/Hotpathhellorchardcontainer';
 
 const { height } = Dimensions.get('window');
 

@@ -1,26 +1,22 @@
+import Hotpathhellorchardstack from './HotGroveScr/HotGroveNavigation/Hotpathhellorchardstack';
+import Hotpathhellorchardloader from './HotGroveScr/HotGroveComponents/Hotpathhellorchardloader';
 import { NavigationContainer } from '@react-navigation/native';
 import { useEffect, useState } from 'react';
-import { MusicProvider } from './HellMemoryOfHotGrove/HellMemoryOfHotGroveStore/hotpathhellorchardcontext';
-import Hotpathhellorchardstack from './HellMemoryOfHotGrove/HellMemoryOfHotGroveNavigation/Hotpathhellorchardstack';
-import Hotpathhellorchardloader from './HellMemoryOfHotGrove/HellMemoryOfHotGroveComponents/Hotpathhellorchardloader';
+import { MusicProvider } from './HotGroveScr/HotGroveStore/hotpathhellorchardcontext';
 
 const App = () => {
-  const [isVisibleStack, setIsVisibleStack] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
-      setIsVisibleStack(false);
+      setIsLoading(false);
     }, 6000);
   }, []);
 
   return (
     <NavigationContainer>
       <MusicProvider>
-        {isVisibleStack ? (
-          <Hotpathhellorchardloader />
-        ) : (
-          <Hotpathhellorchardstack />
-        )}
+        {isLoading ? <Hotpathhellorchardloader /> : <Hotpathhellorchardstack />}
       </MusicProvider>
     </NavigationContainer>
   );

@@ -18,7 +18,7 @@ import { captureRef } from 'react-native-view-shot';
 import Share from 'react-native-share';
 import RNFS from 'react-native-fs';
 import Orientation from 'react-native-orientation-locker';
-import Hotpathhellorchardcontainer from '../HellMemoryOfHotGroveComponents/Hotpathhellorchardcontainer';
+import Hotpathhellorchardcontainer from '../HotGroveComponents/Hotpathhellorchardcontainer';
 import LinearGradient from 'react-native-linear-gradient';
 
 const { height } = Dimensions.get('window');
