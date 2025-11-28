@@ -12,8 +12,8 @@ const Hotpathhellorchardstack = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen
-        name="Hotpathhellorchardonboar"
-        component={Hotpathhellorchardonboar}
+        name="Hotpathhellorchardonboard"
+        component={Hotpathhellorchardonboard}
       />
       <Stack.Screen
         name="Hotpathhellorchardhome"
