@@ -28,7 +28,7 @@ const Hotpathhellorchardabout = () => {
 
   const shareHellPathAbout = () => {
     const shareOptions = {
-      message: `Hell Memory of Hot Grove is a fire-themed puzzle game where you match fruit to reveal the pieces of the “Hot Orchard” painting.
+      message: `Hell Secrets of Hot Grove is a fire-themed puzzle game where you match fruit to reveal the pieces of the “Hot Orchard” painting.
 
 Collect all 5 pieces to create your own fire garden and download it as your wallpaper.
 
@@ -132,7 +132,7 @@ The game works offline, without ads or accounts.`,
 
               <Text
                 style={styles.hellpathheadabouttext}
-              >{`Hell Memory of Hot Grove is a fire-themed puzzle game where you match fruit to reveal the pieces of the “Hot Orchard” painting.
+              >{`Hell Secrets of Hot Grove is a fire-themed puzzle game where you match fruit to reveal the pieces of the “Hot Orchard” painting.
 
 Collect all 5 pieces to create your own fire garden and download it as your wallpaper.
 
