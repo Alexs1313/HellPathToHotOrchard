@@ -70,7 +70,7 @@ The game works offline, without ads or accounts.`,
                     activeOpacity={0.7}
                     onPress={() =>
                       Linking.openURL(
-                        'https://apps.apple.com/us/app/hell-memory-of-hot-grove/id6755678877',
+                        'https://apps.apple.com/us/app/hell-secrets-of-hot-grove/id6755678877',
                       )
                     }
                   >
